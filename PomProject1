@@ -1,0 +1,32 @@
+public class LoginPom {
+
+	@FindBy (xpath="//input[@name='email']") private WebElement username;
+	
+	@FindBy (xpath="//input[@name='pass']") private WebElement password;
+	
+	@FindBy (xpath="//button[@name='login']") private WebElement login;
+	
+	//Initialization
+	
+	public LoginPom(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void enteruserid(String name)
+	{
+		username.sendKeys(name);
+	}
+	
+	public void enterpassword(String pass)
+	{
+		password.sendKeys(pass);
+	}
+	
+	public void clickloginbtn()
+	{
+		login.click();
+	}
+	
+	
+}
