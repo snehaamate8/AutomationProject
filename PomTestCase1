@@ -1,0 +1,19 @@
+public class TC01 {
+
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+
+		 System.setProperty("webdriver.chrome.driver",PathConfig.driverPath);
+			
+			WebDriver driver=new ChromeDriver();
+			
+			driver.get(PathConfig.appUrl);
+			
+			driver.manage().window().maximize();
+			
+			LoginPom pom=new LoginPom(driver);
+			BaseClass bc=new BaseClass();
+			
+			pom.enteruserid(bc.excelRead(0, 1));
+			pom.enterpassword(bc.excelRead(1, 1));
+			pom.clickloginbtn();
+	}
