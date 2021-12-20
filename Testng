@@ -1,0 +1,23 @@
+public class Demo {
+	@Test
+	public void TC01()
+	{
+		Reporter.log("Test NG running Successfully TC01",true);
+	}
+	@Test
+	public void TC02()
+	{
+		Reporter.log("Test NG running successfully TC02",true);
+	}
+	@Test
+	public void TC03()
+	{
+		Reporter.log("Test NG running Successfully TC03",true);
+	}
+	@Test
+	public void TC04()
+	{
+		Reporter.log("Test NG running Successfully TC04",true);
+	}
+
+}
